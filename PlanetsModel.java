@@ -42,7 +42,7 @@ public class PlanetsModel{
     private void resetAcc() {
         for(int i = 0; i < listOfPlanets.size(); i++) {
             listOfPlanets.get(i).setAx(0);
-            listOfPlanets.get(i).setAy(0);;
+            listOfPlanets.get(i).setAy(0);
         }
     }
    
@@ -70,7 +70,6 @@ public class PlanetsModel{
     private void ay(Planet planetToMove, Planet planetThatCauseMove) {
         double a = G * planetThatCauseMove.getMass() / (Math.pow(planetToMove.getX() - planetThatCauseMove.getX(), 2) + Math.pow(planetToMove.getY() - planetThatCauseMove.getY(), 2));
         planetToMove.addAy(a *(planetThatCauseMove.getY() - planetToMove.getY()) / Math.sqrt(Math.pow(planetToMove.getX() - planetThatCauseMove.getX(), 2) + Math.pow(planetToMove.getY() - planetThatCauseMove.getY(), 2)));
-        //System.out.println(planetToMove.getAy());
     }
    
     private void position(double dt) {
